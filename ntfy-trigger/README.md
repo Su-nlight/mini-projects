@@ -37,7 +37,7 @@ The following is a list of all parameters that can be passed when publishing a m
 | `X-Actions` | `Actions`,`Action` | JSON array or short format of user actions |
 | `X-Click` | `Click` | URL to open when notification is clicked |
 | `X-Attach` | `Attach` , `a` | URL to send as an attachment, as an alternative to PUT/POST-ing an attachment|
-|`X-Markdown` | `Markdown` , `md` | Enable Markdown formatting in the notification body|
+| `X-Markdown` | `Markdown` , `md` | Enable Markdown formatting in the notification body|
 | `X-Icon` | `Icon` | URL to use as notification icon |
 | `X-Filename` | `Filename` , `file` , `f` | Optional attachment filename, as it appears in the client|
 | `X-Email` | `X-E-Mail` , `Email` , `E-Mail` , `mail` , `e` | E-mail address for e-mail notifications |
