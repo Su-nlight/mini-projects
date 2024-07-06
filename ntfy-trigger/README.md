@@ -5,9 +5,9 @@ This project is made as a reference and ready to burn code of the presets for NT
 
 | ESP GPIO PIN | KY-022 PIN |
 | :-----: | :-----: |
-| | |
-| | |
-| | |
+| GPIO 15 | data / `S` |
+| 3.3v | +vcc |
+| GND | -vsat |
 
 
 
@@ -21,6 +21,7 @@ Host: ntfy.sh
 Title: Unauthorized access detected
 Priority: urgent
 Tags: warning,skull
+
 Remote access to phils-laptop detected. Act right away.
 ```
 
@@ -47,7 +48,7 @@ The following is a list of all parameters that can be passed when publishing a m
 | `X-UnifiedPush` | `UnifiedPush` , `up` | UnifiedPush publish option, only to be used by UnifiedPush apps |
 | `X-Poll-ID` | `Poll-ID` | Internal parameter, used for iOS push notifications |
 | `Authorization` | - | If supported by the server, you can login to access protected topics |
-
+| `Content-Type`| `-` | If set to `text/markdown` , Markdown formatting is enabled |
 
 
 
