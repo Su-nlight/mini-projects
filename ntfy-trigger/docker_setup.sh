@@ -6,9 +6,14 @@ handle_error() {
 
 trap 'handle_error "Something went wrong!"' ERR
 
+#apt install wget
+#apt install sed
+#apt install docker.io
+
 mkdir /etc/ntfy
 cd /etc/ntfy
 
+#wget -O server.yml https://raw.githubusercontent.com/binwiederhier/ntfy/main/server/server.yml
 wget -O server.yml https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/server.yml
 
 
