@@ -26,5 +26,5 @@ sudo docker run \
 -itd \
 binwiederhier/ntfy \
 serve \
---cache-file /var/cache/ntfy/cache.db
-
+--cache-file /var/cache/ntfy/cache.db \
+--restart unless-stopped
