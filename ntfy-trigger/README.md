@@ -29,7 +29,7 @@ As mentioned in the `docker_setup.sh` file itself you can change the external po
 Run the following command mentioned and relax for it to complete if requirements are already fulfilled the script will be completed in a few instant.
 ```
 sudo chmod +x ntfy_docker_setup.sh
-sudo ./ ntfy_docker.sh
+sudo ./ntfy_docker.sh
 ```
 "Time for a coffee break..." - network_chuck
 
