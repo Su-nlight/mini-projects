@@ -1,5 +1,6 @@
 # NTFY Trigger Project Documentation
 
+
 ## NTFY Setup
 
 This setup is valid for any machiene connected to same network as the ESP module with a static or dynamic IP address. There is a minute difference for setting up NTFY for static and dynamic addresses. For now, I will focus on setting it up with static IP address.
@@ -14,9 +15,9 @@ sudo apt install docker.io
 You can also simply procced to next by uncommenting some lines of `docker_setup.sh` as mentioned in the same.
 
 ### Download Setup file
-Run the following command in terminal of NTFY host machiene.
+Run the following command in terminal of NTFY host machiene to download the setup file.
 ```
-wget -O docker_setup.yml https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/docker_setup.sh
+wget -O ntfy_docker_setup.yml https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/docker_setup.sh
 ```
 **Note** : If you skipped previous step uncomment lines 9 to 11. This can be done using you choice of text editor \[i.e., vim, nano and cat (if you are feelinf adventerous)\] .
 
@@ -24,6 +25,13 @@ you can also use actual `server.yml` file as made by NTFY's creator by uncomment
 
 As mentioned in the `docker_setup.sh` file itself you can change the external port binding (host machiene's) as per your wish by changing the value `2500` (line 30 of same file) to any value (according to your machiene condition) you desire.
 
+### Final Container Creation
+Run the following command mentioned and relax for it to complete if requirements are already fulfilled the script will be completed in a few instant.
+```
+sudo chmod +x ntfy_docker_setup.sh
+sudo ./ ntfy_docker.sh
+```
+"Time for a coffee break..." - network_chuck
 
 ## NTFY Triggers presets
 
