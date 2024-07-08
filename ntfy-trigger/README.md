@@ -1,5 +1,31 @@
+# NTFY Trigger Project Documentation
 
-# NTFY Triggers presets
+## NTFY Setup
+
+This setup is valid for any machiene connected to same network as the ESP module with a static or dynamic IP address. There is a minute difference for setting up NTFY for static and dynamic addresses. For now, I will focus on setting it up with static IP address.
+
+### Install requirements
+Run the following commands in terminal to install wget, sed, Docker on the machiene.
+```
+sudo apt install wget
+sudo apt install sed
+sudo apt install docker.io
+```
+You can also simply procced to next by uncommenting some lines of `docker_setup.sh` as mentioned in the same.
+
+### Download Setup file
+Run the following command in terminal of NTFY host machiene.
+```
+wget -O docker_setup.yml https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/docker_setup.sh
+```
+**Note** : If you skipped previous step uncomment lines 9 to 11. This can be done using you choice of text editor \[i.e., vim, nano and cat (if you are feelinf adventerous)\] .
+
+you can also use actual `server.yml` file as made by NTFY's creator by uncommenting line 16 & line 21 and commenting out line 17. \[This solution is for those who dont trust me even a little bit, as I do not have a very good reputation among my colleages.\]
+
+As mentioned in the `docker_setup.sh` file itself you can change the external port binding (host machiene's) as per your wish by changing the value `2500` (line 30 of same file) to any value (according to your machiene condition) you desire.
+
+
+## NTFY Triggers presets
 
 This project is made as a reference and ready to burn code of the presets for NTFY service using `ESP32` or `ESP8266`. The ESP development board has inbuilt wifi and bluetooth modules and has higher clock speed than arduino boards making it capable for such an application. This project uses `KY-022` infrared reciever module connected to ESP as per following pin scheme.
 
