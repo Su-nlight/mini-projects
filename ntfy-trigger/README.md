@@ -31,21 +31,28 @@ Run the following command mentioned and relax for it to complete if requirements
 sudo chmod +x ntfy_docker_setup.sh
 sudo ./ntfy_docker_setup.sh
 ```
-"Time for a coffee break..." - network_chuck
+`"Time for a coffee break..."` - [Network Chuck](https://www.instagram.com/networkchuck)
+
+### Configuring NTFY on device
+NTFY can be installed on both ios devices and android from respective app stores. After install, follow following step in sequence.
+
+    1. Click ⋮ at top right corner of the NTFY home screen and Go to settings.
+    2. Click on "Default Server" option.
+    3. Add the url of NTFY serving machiene with port to this.
+    4. Now at the homescreen subscribe to the topic you wish to.
+
+To test this simply from the shell of NTFY host machiene enter the following command. This publishes a simple message using a POST request.
+
+```
+curl -d "Test message as you wish dear" ipaddress:port/mytopic
+```
+
 
 ## NTFY Triggers presets
 
-This project is made as a reference and ready to burn code of the presets for NTFY service using `ESP32` or `ESP8266`. The ESP development board has inbuilt wifi and bluetooth modules and has higher clock speed than arduino boards making it capable for such an application. This project uses `KY-022` infrared reciever module connected to ESP as per following pin scheme.
-
-| ESP GPIO PIN | KY-022 PIN |
-| :-----: | :-----: |
-| GPIO 15 | data / `S` |
-| 3.3v | +vcc |
-| GND | -vsat |
 
 
-
-## NTFY API Reference
+### NTFY API Reference
 
 #### Example HTTP call
 
@@ -59,7 +66,8 @@ Tags: warning,skull
 Remote access to phils-laptop detected. Act right away.
 ```
 
-### List of all parameters
+#### List of all parameters
+
 The following is a list of all parameters that can be passed when publishing a message. Parameter names are case-insensitive when used in HTTP headers, and must be lowercase when used as query parameters in the URL. They are listed in the table in their canonical form.<br><br>
 
 | Parameter | Aliases     | Description                |
@@ -85,4 +93,22 @@ The following is a list of all parameters that can be passed when publishing a m
 | `Content-Type`| `-` | If set to `text/markdown` , Markdown formatting is enabled |
 
 
+### ESP module configurations
 
+#### Module connections
+
+This project is made as a reference and ready to burn code of the presets for NTFY service using `ESP32` or `ESP8266`. The ESP development board has inbuilt wifi and bluetooth modules and has higher clock speed than arduino boards making it capable for such an application. This project uses `KY-022` infrared reciever module connected to ESP as per following pin scheme.
+
+| ESP GPIO PIN | KY-022 PIN |
+| :-----: | :-----: |
+| GPIO 15 | data / `S` |
+| 3.3v | +vcc |
+| GND | -vsat |
+
+#### Code upload to ESP
+
+Nextly, open Arduino IDE and create new sketch, now add the code that is in [esp32-ntfy-presets.ino](https://github.com/Su-nlight/mini-projects/blob/main/ntfy-trigger/esp32-ntfy-presets.ino).
+
+**Note** : I assume that appropriate board are added, if not then follow [this tutorial](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions). Further select ESP board and port of comuter to which it is connected (Appropriate drivers must be installed beforehand for serial communication)
+
+Now you can configure the Switch case as per the remote youhave and its hex codes of that remote. Take assistance of the [NTFY API Reference](#NTFY-API-Reference) and make it as per your requirement, this is all upto your coding.
