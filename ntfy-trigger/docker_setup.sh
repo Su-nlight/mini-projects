@@ -25,11 +25,11 @@ cd ~
 # change port number set by me as 2500 to your desired port.
 
 sudo docker run \
+--restart unless-stopped \
 -v /var/cache/ntfy:/var/cache/ntfy \
 -v /etc/ntfy:/etc/ntfy \
 -p 2500:80 \
 -itd \
 binwiederhier/ntfy \
 serve \
---cache-file /var/cache/ntfy/cache.db \
---restart unless-stopped
+--cache-file /var/cache/ntfy/cache.db
