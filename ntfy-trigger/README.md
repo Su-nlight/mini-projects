@@ -17,7 +17,7 @@ You can also simply procced to next by uncommenting some lines of `docker_setup.
 ### Download Setup file
 Run the following command in terminal of NTFY host machiene to download the setup file.
 ```
-wget -O ntfy_docker_setup.yml https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/docker_setup.sh
+wget -O ntfy_docker_setup.sh https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/docker_setup.sh
 ```
 **Note** : If you skipped previous step uncomment lines 9 to 11. This can be done using you choice of text editor \[i.e., vim, nano and cat (if you are feeling adventerous)\] .
 
