@@ -19,7 +19,7 @@ Run the following command in terminal of NTFY host machiene to download the setu
 ```
 wget -O ntfy_docker_setup.yml https://raw.githubusercontent.com/Su-nlight/mini-projects/main/ntfy-trigger/docker_setup.sh
 ```
-**Note** : If you skipped previous step uncomment lines 9 to 11. This can be done using you choice of text editor \[i.e., vim, nano and cat (if you are feelinf adventerous)\] .
+**Note** : If you skipped previous step uncomment lines 9 to 11. This can be done using you choice of text editor \[i.e., vim, nano and cat (if you are feeling adventerous)\] .
 
 you can also use actual `server.yml` file as made by NTFY's creator by uncommenting line 16 & line 21 and commenting out line 17. \[This solution is for those who dont trust me even a little bit, as I do not have a very good reputation among my colleages.\]
 
@@ -29,7 +29,7 @@ As mentioned in the `docker_setup.sh` file itself you can change the external po
 Run the following command mentioned and relax for it to complete if requirements are already fulfilled the script will be completed in a few instant.
 ```
 sudo chmod +x ntfy_docker_setup.sh
-sudo ./ntfy_docker.sh
+sudo ./ntfy_docker_setup.sh
 ```
 "Time for a coffee break..." - network_chuck
 
