@@ -10,7 +10,7 @@ const char* password = "Password";
 const char* serverName = "https://ntfy.com:80/";
 
 
-IRrecv irrecv(5); //defines gpio pin to which ir reviever is connected
+IRrecv irrecv(15); //defines gpio pin to which ir reviever is connected
 decode_results results;
 
 void setup() {
