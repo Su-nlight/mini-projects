@@ -29,7 +29,7 @@ sudo docker run \
 -v /var/cache/ntfy:/var/cache/ntfy \
 -v /etc/ntfy:/etc/ntfy \
 -p 2500:80 \
--itd \
+-d \
 binwiederhier/ntfy \
 serve \
 --cache-file /var/cache/ntfy/cache.db
