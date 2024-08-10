@@ -1,7 +1,8 @@
 # NTFY Trigger Project Documentation
 
+NTFY is a lightweight, self-hosted notification service that enables easy push notifications through simple HTTP requests. Ideal for personal projects and small-scale alerting, it offers full control over your data and security. NTFY is highly customizable, cross-platform, and perfect for seamless integration into scripts and applications.
 
-## NTFY Setup
+## NTFY Server Setup
 
 This setup is valid for any machiene connected to same network as the ESP module with a static or dynamic IP address. There is a minute difference for setting up NTFY for static and dynamic addresses. For now, I will focus on setting it up with static IP address.
 
@@ -49,7 +50,7 @@ curl -d "Test message as you wish dear" ipaddress:port/mytopic
 
 
 ## NTFY Triggers presets
-
+NTFY triggers are automated events that initiate notifications based on specific conditions or actions. By configuring triggers, you can set up NTFY to send alerts when certain thresholds are met, such as server downtime, application errors, or system performance issues. Triggers are highly customizable, allowing for real-time monitoring and immediate response to critical events. This makes NTFY an effective tool for ensuring timely notifications and enhancing system reliability.
 
 
 ### NTFY API Reference
@@ -94,6 +95,7 @@ The following is a list of all parameters that can be passed when publishing a m
 
 
 ### ESP module configurations
+The ESP32 is a powerful, low-cost microcontroller with built-in Wi-Fi and Bluetooth capabilities, widely used in IoT projects. It features a dual-core processor, multiple GPIO pins, and supports various communication protocols, making it versatile for a range of applications. The ESP32 is popular for its robust performance, energy efficiency, and the ability to handle complex tasks like real-time data processing and wireless communication.
 
 #### Module connections
 
@@ -112,3 +114,6 @@ Nextly, open Arduino IDE and create new sketch, now add the code that is in [esp
 **Note** : I assume that appropriate board are added, if not then follow [this tutorial](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions). Further select ESP board and port of comuter to which it is connected (Appropriate drivers must be installed beforehand for serial communication)
 
 Now you can configure the Switch case as per the remote youhave and its hex codes of that remote. Take assistance of the [NTFY API Reference](#NTFY-API-Reference) and make it as per your requirement, this is all upto your coding.
+
+## Conclusion
+The "ntfy-trigger" project in this GitHub repository is a tool designed to automate and manage notifications using the NTFY service. It allows users to set up triggers that monitor specific events or conditions, automatically sending alerts when these criteria are met. The project integrates seamlessly with NTFY, providing a lightweight solution for real-time monitoring and notifications. With customizable triggers and notification parameters, "ntfy-trigger" is ideal for developers and enthusiasts seeking to implement efficient, automated alert systems in their projects. This makes it especially useful for small-scale applications, personal projects, or any scenario requiring timely notifications.
